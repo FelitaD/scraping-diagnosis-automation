@@ -1,4 +1,4 @@
-# Outil de pré-diagnostic de la collecte des docs admins
+# Scraping Diagnosis Automation
 
 Diagnosis of unscraped administrative documents.
 
@@ -12,6 +12,8 @@ Automates the identification of these 3 problems:
 After identification, the diagnosis is held manually.
 
 ## Description
+
+Data is extracted from a Google sheet, processed and sent back with diagnosis.
 
 processor.extractor.extractor<br>
 `SampleExtractor`<br>
