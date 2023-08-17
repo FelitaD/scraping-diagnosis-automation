@@ -1,0 +1,21 @@
+# PynSource Version 1.2
+{'type':'meta', 'info1':'Lorem ipsum dolor sit amet, consectetur adipiscing elit is latin. Comments are saved.'}
+{'type':'umlshape', 'id':'Exporter', 'x':1019, 'y':29, 'width':118, 'height':164, 'attrs': 'END_INDEX|diagnosed_docs|diagnosed_raw_data|raw_data|sheet', 'meths': '__init__|clear_google_sheet|export_results|format_and_export|format_results|merge_results'}
+{'type':'umlshape', 'id':'SampleExtractor', 'x':68, 'y':49, 'width':136, 'height':124, 'attrs': 'COLS_TO_KEEP|docs|sheet|unscraped_docs', 'meths': '__init__|get_raw_data|get_unscraped_docs'}
+{'type':'umlshape', 'id':'AWSExtractor', 'x':66, 'y':383, 'width':154, 'height':144, 'attrs': 'ADMIN_DOC_BUCKET|DENY_CONFIG_KEY|PRD_RAW_FILES_BUCKET|STRUCTURED_COLLECTS_KEY|deny_config_path|s3|structured_collects_path', 'meths': 'get_crawler_deny_config|get_structured_collects'}
+{'type':'umlshape', 'id':'OfficialUrlsExtractor', 'x':65, 'y':216, 'width':186, 'height':124, 'attrs': 'infos_sheet', 'meths': '__init__|add_leading_zero|get_official_urls|get_sample_uids|remove_null_values|request_database'}
+{'type':'umlshape', 'id':'Diagnoser', 'x':756, 'y':229, 'width':232, 'height':94, 'attrs': '', 'meths': 'diagnose|is_denied_domain|is_denied_pattern|is_not_official_url|is_timeout_proportion_over_50_percent'}
+{'type':'umlshape', 'id':'DeniedUrlsAggregator', 'x':529, 'y':437, 'width':178, 'height':84, 'attrs': 'path', 'meths': '__init__|get_denied_urls'}
+{'type':'umlshape', 'id':'SampleAggregator', 'x':524, 'y':144, 'width':154, 'height':164, 'attrs': 'aggregated_docs|docs|official_urls|structured_collects_path', 'meths': '__init__|add_document_domain|add_official_domain|add_timeout_proportion|aggregate|extract_dns|load_collects'}
+{'type':'comment', 'id':'C4673', 'x':264, 'y':387, 'width':219, 'height':48, 'comment': 'c3RydWN0dXJlZF9jb2xsZWN0cy5jc3Y='}
+{'type':'comment', 'id':'C7229', 'x':264, 'y':449, 'width':218, 'height':43, 'comment': 'Y3Jhd2xlcl9kZW55X2NvbmZpZy5qc29u'}
+{'type':'edge', 'id':'SampleAggregator_to_SampleExtractor', 'source':'SampleAggregator', 'target':'SampleExtractor', 'uml_edge_type': 'association'}
+{'type':'edge', 'id':'SampleAggregator_to_OfficialUrlsExtractor', 'source':'SampleAggregator', 'target':'OfficialUrlsExtractor', 'uml_edge_type': 'association'}
+{'type':'edge', 'id':'Exporter_to_SampleExtractor', 'source':'Exporter', 'target':'SampleExtractor', 'uml_edge_type': 'association'}
+{'type':'edge', 'id':'Diagnoser_to_SampleAggregator', 'source':'Diagnoser', 'target':'SampleAggregator', 'uml_edge_type': 'association'}
+{'type':'edge', 'id':'Diagnoser_to_DeniedUrlsAggregator', 'source':'Diagnoser', 'target':'DeniedUrlsAggregator', 'uml_edge_type': 'association'}
+{'type':'edge', 'id':'C4673_to_AWSExtractor', 'source':'C4673', 'target':'AWSExtractor', 'uml_edge_type': 'association'}
+{'type':'edge', 'id':'C7229_to_AWSExtractor', 'source':'C7229', 'target':'AWSExtractor', 'uml_edge_type': 'association'}
+{'type':'edge', 'id':'DeniedUrlsAggregator_to_C7229', 'source':'DeniedUrlsAggregator', 'target':'C7229', 'uml_edge_type': 'association'}
+{'type':'edge', 'id':'SampleAggregator_to_C4673', 'source':'SampleAggregator', 'target':'C4673', 'uml_edge_type': 'association'}
+{'type':'edge', 'id':'Exporter_to_Diagnoser', 'source':'Exporter', 'target':'Diagnoser', 'uml_edge_type': 'association'}

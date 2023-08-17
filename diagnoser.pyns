@@ -1,0 +1,9 @@
+# PynSource Version 1.2
+{'type':'meta', 'info1':'Lorem ipsum dolor sit amet, consectetur adipiscing elit is latin. Comments are saved.'}
+{'type':'umlshape', 'id':'Exporter', 'x':923, 'y':46, 'width':118, 'height':164, 'attrs': 'END_INDEX|diagnosed_docs|diagnosed_raw_data|raw_data|sheet', 'meths': '__init__|clear_google_sheet|export_results|format_and_export|format_results|merge_results'}
+{'type':'umlshape', 'id':'SampleExtractor', 'x':130, 'y':48, 'width':136, 'height':124, 'attrs': 'COLS_TO_KEEP|docs|sheet|unscraped_docs', 'meths': '__init__|get_raw_data|get_unscraped_docs'}
+{'type':'umlshape', 'id':'AWSExtractor', 'x':130, 'y':201, 'width':154, 'height':144, 'attrs': 'ADMIN_DOC_BUCKET|DENY_CONFIG_KEY|PRD_RAW_FILES_BUCKET|STRUCTURED_COLLECTS_KEY|deny_config_path|s3|structured_collects_path', 'meths': 'get_crawler_deny_config|get_structured_collects'}
+{'type':'umlshape', 'id':'OfficialUrlsExtractor', 'x':127, 'y':387, 'width':186, 'height':124, 'attrs': 'infos_sheet', 'meths': '__init__|add_leading_zero|get_official_urls|get_sample_uids|remove_null_values|request_database'}
+{'type':'umlshape', 'id':'Diagnoser', 'x':631, 'y':48, 'width':232, 'height':94, 'attrs': '', 'meths': 'diagnose|is_denied_domain|is_denied_pattern|is_not_official_url|is_timeout_proportion_over_50_percent'}
+{'type':'umlshape', 'id':'DeniedUrlsAggregator', 'x':395, 'y':250, 'width':178, 'height':84, 'attrs': 'path', 'meths': '__init__|get_denied_urls'}
+{'type':'umlshape', 'id':'SampleAggregator', 'x':394, 'y':48, 'width':154, 'height':164, 'attrs': 'aggregated_docs|docs|official_urls|structured_collects_path', 'meths': '__init__|add_document_domain|add_official_domain|add_timeout_proportion|aggregate|extract_dns|load_collects'}
